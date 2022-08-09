@@ -8,6 +8,10 @@ export default function NavBar() {
       </div>
 
       <div>
+        <NavLink to="/widgets">Widgets</NavLink>
+      </div>
+
+      <div>
         <NavLink to="/about">About</NavLink>
       </div>
 

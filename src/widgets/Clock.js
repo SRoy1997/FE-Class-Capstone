@@ -8,11 +8,11 @@ export default class ClockWidget extends Component {
     };
   }
 
-  componentDidMount() {
-    this.intervalID = setInterval(() => {
-      this.updateClock(), 1000;
-    });
-  }
+  // componentDidMount() {
+  //   this.intervalID = setInterval(() => {
+  //     this.updateClock(), 1000;
+  //   });
+  // }
 
   updateClock() {
     this.setState({
