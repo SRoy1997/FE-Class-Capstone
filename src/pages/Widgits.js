@@ -1,10 +1,4 @@
-import {
-  Route,
-  Switch,
-  BrowserRouter as Router,
-  useHistory,
-  NavLink,
-} from "react-router-dom";
+import { Route, Switch, BrowserRouter as Router, Link } from "react-router-dom";
 
 import ClockWidget from "../widgets/Clock";
 import ColorChanger from "../widgets/ColorChanger";
@@ -12,36 +6,46 @@ import Counter from "../widgets/Counter";
 import PasswordToggle from "../widgets/PasswordToggle";
 
 export default function WidgetsPage() {
-  const history = useHistory();
-
   return (
     <div className="Widgets">
       <div>
         <div>
           <div className="ClockWidgetButton">
-            <button onClick={() => history.push("/clock_widget")}>Clock</button>
+            <Link to="/widget/Clock">
+              <button>Clock Widget</button>
+            </Link>
           </div>
         </div>
 
         <div>
           <div className="ColorChangerWidgetButton">
-            <NavLink to="/color_changer_widget">Color Changer Widget</NavLink>
+            <Link to="/widget/ColorChanger">
+              <button>Color Changer Widget</button>
+            </Link>
           </div>
         </div>
 
         <div>
           <div className="CounterWidgetButton">
-            <button onClick={() => history.push("/counter_widget")}>
-              Counter
-            </button>
+            <Link to="/widget/Counter">
+              <button>Counter Widget</button>
+            </Link>
           </div>
         </div>
 
         <div>
           <div className="PasswordToggleWidgetButton">
-            <button onClick={() => history.push("/password_toggle_widget")}>
-              Password Toggle
-            </button>
+            <Link to="/widget/PasswordToggle">
+              <button>Password Toggle Widget</button>
+            </Link>
+          </div>
+        </div>
+
+        <div>
+          <div className="WeatherWidgetButton">
+            <Link to="/widget/Weather">
+              <button>Weather Widget</button>
+            </Link>
           </div>
         </div>
       </div>

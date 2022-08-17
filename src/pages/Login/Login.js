@@ -1,21 +1,18 @@
 import { useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
-import { UserContext } from "../components/LoginAuth/UserProvider";
+import { UserContext } from "./UserProvider";
 
-export default function LoginPage() {
+function LoginPage() {
   const history = useHistory();
   const { setUser, setAuthIsLoading } = useContext(UserContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
-
   function handleSubmit(e) {
     e.preventDefault();
-
     setAuthIsLoading(true);
     setErrorMsg("");
-
-    fetch("https://www.devpipeline-mock-api.herokuapp.com/api/auth/login", {
+    fetch("https://devpipeline-mock-api.herokuapp.com/api/auth/login", {
       method: "POST",
       body: JSON.stringify({
         email,
@@ -30,18 +27,34 @@ export default function LoginPage() {
       .then((data) => {
         setAuthIsLoading(false);
         if (data.message === "Logged In") {
-          history.push("/dashboard");
+          history.push("/home");
           setUser(data.user);
         }
-        setErrorMsg("invalid credentials");
       })
+
       .catch((err) => {
         setAuthIsLoading(false);
         setErrorMsg("Invalid Credentials");
         console.error("Login Error: ", err);
       });
-  }
 
+    //   setTimeout(() => {
+    //     if (email === "amee@devpipeline.com" && password === "Hello1234") {
+    //       setUser({
+    //         id: 1,
+    //         first_name: "Amee",
+    //         last_name: "Brisk",
+    //         role: "admin",
+    //       });
+    //       setAuthIsLoading(false);
+    //       history.push("/dashboard");
+    //     } else {
+    //       setUser(null);
+    //       setAuthIsLoading(false);
+    //       setErrorMsg("Invalid Credentials");
+    //     }
+    //   }, 3000);
+  }
   return (
     <div className="login-page">
       <h1>Login</h1>
@@ -64,9 +77,16 @@ export default function LoginPage() {
         </div>
         <div>
           <input type="submit" />
+          {/* {authIsLoading && !errorMsg ? (
+            <input type="submit" />
+          ) : (
+            <h1>...submitting</h1>
+          )} */}
         </div>
         {errorMsg}
       </form>
     </div>
   );
 }
+
+export default LoginPage;

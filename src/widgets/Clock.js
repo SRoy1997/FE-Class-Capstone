@@ -1,32 +1,19 @@
-import { Component } from "react";
+import React, { useEffect, useState } from "react";
 
-export default class ClockWidget extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      time: new Date().toLocaleTimeString(),
-    };
-  }
+export default function Clock() {
+  const [clockState, setClockState] = useState();
 
-  // componentDidMount() {
-  //   this.intervalID = setInterval(() => {
-  //     this.updateClock(), 1000;
-  //   });
-  // }
+  useEffect(() => {
+    setInterval(() => {
+      const date = new Date();
+      setClockState(date.toLocaleTimeString());
+    }, 1000);
+  }, []);
 
-  updateClock() {
-    this.setState({
-      time: new Date().toLocaleTimeString(),
-    });
-  }
-
-  render() {
-    return (
-      <div className="Time">
-        <h1>Time</h1>
-
-        <h3>{this.state.time}</h3>
-      </div>
-    );
-  }
+  return (
+    <div>
+      <h1>Clock Widget</h1>
+      <div style={{ fontSize: "25px" }}>{clockState}</div>
+    </div>
+  );
 }

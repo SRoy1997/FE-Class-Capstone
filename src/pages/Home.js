@@ -5,7 +5,7 @@ import {
   useHistory,
 } from "react-router-dom";
 
-import LoginPage from "../pages/Login";
+import LoginPage from "./Login/Login";
 
 export default function HomePage() {
   const history = useHistory();
