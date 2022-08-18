@@ -1,0 +1,26 @@
+.LoginHome {
+  display: flex;
+  align-items: center;
+  height: 100%;
+
+  .LoginHomeContent {
+    width: calc(50vw - 100px);
+    margin: 50px;
+    height: calc(100% - 100px);
+
+    h1 {
+      border-bottom: 5px solid #5b929a;
+    }
+
+    button {
+      width: 150px;
+      height: 50px;
+    }
+  }
+
+  .LoginHomeRightSide {
+    background-color: #077395;
+    width: 50vw;
+    height: 100%;
+  }
+}

@@ -14,13 +14,12 @@ import SearchSwapi from "../../widgets/SwapiQuery";
 function DefaultContainer() {
   return (
     <Switch>
-      <Route path="/homepage" component={HomePage} />
+      <Route path="/home" component={HomePage} />
       <Route path="/about" component={AboutPage} />
       <Route path="/logout" component={LogoutPage} />
       <Route path="/widgets" component={WidgetDashboard} />
-      <Route path="/counter/widget" component={WidgetDashboard} />
-      <Route path="/widget/colorchanger" component={ColorChangerWidget} />
-      <Route path="/widget/counter" component={CounterWidget} />
+      <Route path="/widget/ColorChanger" component={ColorChangerWidget} />
+      <Route path="/widget/Counter" component={CounterWidget} />
       <Route path="/widget/Clock" component={ClockWidget} />
       <Route path="/widget/Weather" component={WeatherWidget} />
       <Route path="/widget/Swapi" component={SearchSwapi} />

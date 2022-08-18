@@ -27,7 +27,7 @@ function LoginPage() {
       .then((data) => {
         setAuthIsLoading(false);
         if (data.message === "Logged In") {
-          history.push("/widgets");
+          history.push("/home");
           setUser(data.user);
         }
       })

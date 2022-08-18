@@ -4,7 +4,7 @@ export default function NavBar() {
   return (
     <div className="navbar-container">
       <div className="home">
-        <NavLink to="/">Home</NavLink>
+        <NavLink to="/home">Home</NavLink>
       </div>
 
       <div className="widgets">
@@ -13,10 +13,6 @@ export default function NavBar() {
 
       <div className="about">
         <NavLink to="/about">About</NavLink>
-      </div>
-
-      <div className="contact">
-        <NavLink to="/contact">Contact</NavLink>
       </div>
 
       <div className="logout">
