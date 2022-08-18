@@ -1,0 +1,25 @@
+.counterWidget {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  .counterButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 300px;
+
+    h4 {
+      color: #074a5d;
+      font-size: larger;
+    }
+
+    Button {
+      height: 30px;
+      width: 30px;
+      font-size: larger;
+    }
+  }
+}

@@ -17,7 +17,6 @@ import NavBar from "./components/NavBar";
 // import ClockWidget from "./widgets/Clock";
 // import ColorChangerWidget from "./widgets/ColorChanger";
 // import CounterWidget from "./widgets/Counter";
-// import PasswordToggleWidget from "./widgets/PasswordToggle";
 // import WeatherWidget from "./widgets/Weather";
 
 import "./styles/styles.scss";
@@ -45,10 +44,7 @@ export default function App() {
             <Route path="/widget/Clock" component={ClockWidget} />
             <Route path="/widget/ColorChanger" component={ColorChangerWidget} />
             <Route path="/widget/Counter" component={CounterWidget} />
-            <Route
-              path="/widget/PasswordToggle"
-              component={PasswordToggleWidget}
-            />
+            
             <Route path="/widget/Weather" component={WeatherWidget} />
 
             <Route path="/about" component={AboutPage} />

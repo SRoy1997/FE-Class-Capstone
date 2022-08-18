@@ -27,7 +27,7 @@ function LoginPage() {
       .then((data) => {
         setAuthIsLoading(false);
         if (data.message === "Logged In") {
-          history.push("/home");
+          history.push("/widgets");
           setUser(data.user);
         }
       })
@@ -37,23 +37,6 @@ function LoginPage() {
         setErrorMsg("Invalid Credentials");
         console.error("Login Error: ", err);
       });
-
-    //   setTimeout(() => {
-    //     if (email === "amee@devpipeline.com" && password === "Hello1234") {
-    //       setUser({
-    //         id: 1,
-    //         first_name: "Amee",
-    //         last_name: "Brisk",
-    //         role: "admin",
-    //       });
-    //       setAuthIsLoading(false);
-    //       history.push("/dashboard");
-    //     } else {
-    //       setUser(null);
-    //       setAuthIsLoading(false);
-    //       setErrorMsg("Invalid Credentials");
-    //     }
-    //   }, 3000);
   }
   return (
     <div className="login-page">
@@ -76,7 +59,7 @@ function LoginPage() {
           />
         </div>
         <div>
-          <input type="submit" />
+          <input type="submit" className="submit" />
           {/* {authIsLoading && !errorMsg ? (
             <input type="submit" />
           ) : (

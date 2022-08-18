@@ -1,0 +1,43 @@
+@import "./NavBar.scss";
+@import "./WidgetsPage.scss";
+@import "./Clock.scss";
+@import "./ColorChanger.scss";
+@import "./Counter.scss";
+@import "./Swapi.scss";
+@import "./Weather.scss";
+@import "./Login.scss";
+
+body {
+  margin: 0;
+}
+
+button {
+  color: #8dc1d0;
+  background-color: #074a5d;
+  border: none;
+  border-radius: 10px;
+}
+
+button:hover {
+  background-color: #f2f1ee;
+  border: 1px solid #074a5d;
+}
+
+.back-button {
+  margin-top: 50px;
+
+  button {
+    color: #8dc1d0;
+    background-color: #074a5d;
+    border: none;
+    border-radius: 10px;
+    width: 75px;
+    height: 30px;
+    font-size: large;
+  }
+
+  button:hover {
+    background-color: #f2f1ee;
+    border: 1px solid #074a5d;
+  }
+}

@@ -1,0 +1,21 @@
+.Widgets {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 100px;
+
+  button {
+    width: 200px;
+    height: 200px;
+    font-size: larger;
+    color: #8dc1d0;
+    background-color: #074a5d;
+    border: none;
+    border-radius: 10px;
+  }
+
+  button:hover {
+    background-color: #f2f1ee;
+    border: 5px solid #074a5d;
+  }
+}

@@ -1,0 +1,16 @@
+.Clock {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  .back-button {
+    margin-top: 50px;
+
+    button {
+      width: 75px;
+      height: 30px;
+      font-size: large;
+    }
+  }
+}

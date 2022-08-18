@@ -3,12 +3,13 @@ import { Route, Switch, BrowserRouter as Router, Link } from "react-router-dom";
 import ClockWidget from "../widgets/Clock";
 import ColorChanger from "../widgets/ColorChanger";
 import Counter from "../widgets/Counter";
-import PasswordToggle from "../widgets/PasswordToggle";
+import SearchSwapi from "../widgets/SwapiQuery";
+import WeatherWidget from "../widgets/Weather";
 
 export default function WidgetsPage() {
   return (
-    <div className="Widgets">
-      <div>
+    <div>
+      <div className="Widgets">
         <div>
           <div className="ClockWidgetButton">
             <Link to="/widget/Clock">
@@ -34,9 +35,9 @@ export default function WidgetsPage() {
         </div>
 
         <div>
-          <div className="PasswordToggleWidgetButton">
-            <Link to="/widget/PasswordToggle">
-              <button>Password Toggle Widget</button>
+          <div className="SwapiQueryWidget">
+            <Link to="/widget/Swapi">
+              <button>Swapi Query Widget</button>
             </Link>
           </div>
         </div>
@@ -51,13 +52,15 @@ export default function WidgetsPage() {
       </div>
       <Router>
         <Switch>
-          <Route exact path="/clock_widget" component={ClockWidget} />
+          <Route path="/Clock" component={ClockWidget} />
 
-          <Route path="/color_changer_widget" component={ColorChanger} />
+          <Route path="/ColorChanger" component={ColorChanger} />
 
-          <Route path="/counter_widget" component={Counter} />
+          <Route path="/Counter" component={Counter} />
 
-          <Route path="/password_toggle_widget" component={PasswordToggle} />
+          <Route path="/Swapy" component={SearchSwapi} />
+
+          <Route path="/Weather" component={WeatherWidget} />
         </Switch>
       </Router>
     </div>

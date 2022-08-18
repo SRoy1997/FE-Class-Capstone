@@ -1,0 +1,35 @@
+.swapi-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  .swapi-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    select {
+      margin-bottom: 25px;
+      width: 200px;
+      height: 35px;
+    }
+
+    input {
+      margin-bottom: 25px;
+      width: 200px;
+      height: 35px;
+    }
+
+    button {
+      width: 100px;
+      height: 35px;
+      margin-bottom: 50px;
+    }
+  }
+
+  .results {
+    font-size: larger;
+  }
+}

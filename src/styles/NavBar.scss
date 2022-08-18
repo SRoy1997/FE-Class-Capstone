@@ -1,0 +1,20 @@
+.navbar-container {
+  margin: 0 auto;
+  background-color: #077395;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow: hidden;
+  font-size: larger;
+
+  a:link {
+    text-decoration: none;
+    color: #aadbe0;
+  }
+
+  a:visited {
+    color: #aadbe0;
+  }
+}

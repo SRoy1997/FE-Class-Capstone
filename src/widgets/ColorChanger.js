@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function ColorChanger() {
   const [color, setColor] = useState("black");
@@ -17,7 +18,7 @@ export default function ColorChanger() {
         {message && message[0].toUpperCase() + message.slice(1)}
       </h1>
 
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="color-form">
         <input
           name="color"
           type="text"
@@ -26,6 +27,12 @@ export default function ColorChanger() {
         />
         <button>Change Color</button>
       </form>
+
+      <div className="back-button">
+        <Link to="/widgets">
+          <button>Back</button>
+        </Link>
+      </div>
     </div>
   );
 }

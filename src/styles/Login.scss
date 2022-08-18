@@ -1,0 +1,29 @@
+.login-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 50px;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .submit {
+      align-self: center;
+      color: #8dc1d0;
+      background-color: #074a5d;
+      border: none;
+      border-radius: 10px;
+      width: 100px;
+      height: 35px;
+
+      &:hover {
+        background-color: #f2f1ee;
+        border: 1px solid #074a5d;
+      }
+    }
+  }
+}

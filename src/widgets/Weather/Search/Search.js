@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { GEO_API_URL } from "../api";
+import { GEO_API_URL } from "../weather_api";
 
-const Search = ({ onSearchChange, url, fetchOptions }) => {
+const Search = ({ onSearchChange }) => {
   const [search, setSearch] = useState(null);
 
   useEffect(() => {
@@ -25,7 +25,7 @@ const Search = ({ onSearchChange, url, fetchOptions }) => {
     <input
       type="search"
       onChange={(e) => setSearch(e.target.value)}
-      placeholder="Serch for city"
+      placeholder="Search for city"
       value={search}
     />
   );

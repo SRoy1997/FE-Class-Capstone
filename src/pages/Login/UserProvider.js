@@ -39,7 +39,7 @@ function UserProvider({ children }) {
       .then((data) => {
         if (data.user?.role) {
           setUser(data.user);
-          history.push("");
+          // history.push("");
         } else {
           setUser(null);
         }
